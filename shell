@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -eu
+
+HERE=$(readlink -m $(dirname ${BASH_SOURCE[0]}))
+
+exec nix-shell -A shell $HERE/default.nix 
