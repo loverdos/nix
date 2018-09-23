@@ -6,6 +6,7 @@ in let
   custom = pkgs.callPackage ./custom  {};
   misc   = pkgs.callPackage ./misc    {};
 
+  logic   = pkgs.callPackage ./logic   {};
   haskell = pkgs.callPackage ./haskell {};
   python3 = pkgs.callPackage ./python  {};
   scala   = pkgs.callPackage ./scala   {};
@@ -15,6 +16,7 @@ in let
     clifun
     misc
 
+    logic
     haskell
     python3
     scala
