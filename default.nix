@@ -1,5 +1,6 @@
 let
   pkgs = import ./pkgs.nix;
+  util = pkgs.callPackage ./util.nix {};
   name = "ckkl-default";
 in let
   clifun = pkgs.callPackage ./clifun  {};
@@ -23,24 +24,21 @@ in let
   ];
 in let
   # nix-shell -A shell
-  shell = pkgs.stdenv.mkDerivation {
+  shell_ = pkgs.stdenv.mkDerivation {
     inherit name;
-
     buildInputs = all;
-
-    shellHook = ''
-    '';
   };
+  shell = util.setPriority 0 shell_;
 
   # nix-build -A build
-  build = pkgs.buildEnv {
+  build_ = pkgs.buildEnv {
     inherit name;
     paths = all;
   };
+  build = util.setPriority 0 build_;
 
   # nix-env -iA install -f default.nix
   install = build;
 in {
   inherit shell build install;
 }
-
