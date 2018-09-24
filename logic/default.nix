@@ -5,5 +5,9 @@ pkgs.buildEnv {
   paths = with pkgs; [
     coq
     coq2html
+
+    tlaplus
+    tlaplusToolbox
+    tlaps
   ];
 }
