@@ -57,6 +57,9 @@ pkgs.buildEnv {
     umlet
     plantuml
 
+    # calendar
+    gcalcli
+
     # media
     youtube-dl
 
