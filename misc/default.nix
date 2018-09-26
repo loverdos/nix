@@ -39,8 +39,10 @@ pkgs.buildEnv {
     hping
     nmap
     wget
+    zerotierone
 
     # nix
+    nix-diff
     nix-info
     nix-prefetch-git
     nixops
