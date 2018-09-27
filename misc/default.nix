@@ -1,7 +1,7 @@
-{ pkgs /*: NixPkgs*/ }:
+{ pkgs /*: NixPkgs*/, envName }:
 
 pkgs.buildEnv {
-  name = "ckkl-misc";
+  name = "${envName}-misc";
   paths = with pkgs; [
     # diff
     colordiff
@@ -48,6 +48,7 @@ pkgs.buildEnv {
     nixops
 
     # CLI
+    ag
     jq
     parallel
     pv

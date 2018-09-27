@@ -1,7 +1,7 @@
-{ pkgs /*: NixPkgs*/ }:
+{ pkgs /*: NixPkgs*/, envName }:
 
 pkgs.buildEnv {
-  name = "ckkl-clifun";
+  name = "${envName}-clifun";
   paths = with pkgs; [
     cowsay
     figlet

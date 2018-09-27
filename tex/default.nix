@@ -1,4 +1,4 @@
-{ pkgs /*: NixPkgs*/ }:
+{ pkgs /*: NixPkgs*/, envName }:
 
 let
   tex = pkgs.texlive.combine {
@@ -13,7 +13,7 @@ let
   };
 in
   pkgs.buildEnv {
-    name = "ckkl-tex";
+    name = "${envName}-tex";
     paths = [
       tex
     ];

@@ -1,4 +1,4 @@
-{ pkgs /*: NixPkgs*/ }:
+{ pkgs /*: NixPkgs*/, envName }:
 
 let
   emojify    = pkgs.callPackage ./emojify.nix {};  
@@ -6,7 +6,7 @@ let
   wtf        = pkgs.callPackage ./wtf.nix {};
 in
   pkgs.buildEnv {
-    name = "ckkl-custom";
+    name = "${envName}-custom";
     paths = [
       emojify
       whatIsMyIp

@@ -1,18 +1,20 @@
 let
+  env = import ./env.nix;
   pkgs = import ./pkgs.nix;
+  callPackage = pkgs.newScope env;
   util = pkgs.callPackage ./util.nix {};
-  name = "ckkl-default";
+  name = "${env.envName}-env";
 in let
-  clifun = pkgs.callPackage ./clifun  {};
-  custom = pkgs.callPackage ./custom  {};
-  misc   = pkgs.callPackage ./misc    {};
+  clifun = callPackage ./clifun  {};
+  custom = callPackage ./custom  {};
+  misc   = callPackage ./misc    {};
 
-  tex = pkgs.callPackage ./tex {};
+  tex = callPackage ./tex {};
 
-  logic   = pkgs.callPackage ./logic   {};
-  haskell = pkgs.callPackage ./haskell {};
-  python3 = pkgs.callPackage ./python  {};
-  scala   = pkgs.callPackage ./scala   {};
+  logic   = callPackage ./logic   {};
+  haskell = callPackage ./haskell {};
+  python3 = callPackage ./python  {};
+  scala   = callPackage ./scala   {};
 in let
   all = [
     custom

@@ -1,7 +1,7 @@
-{ pkgs /*: NixPkgs*/ }:
+{ pkgs /*: NixPkgs*/, envName }:
 
 pkgs.buildEnv {
-  name = "ckkl-scala";
+  name = "${envName}-scala";
   paths = with pkgs; [
     jdk8
     
