@@ -13,25 +13,16 @@ in let
   misc   = call ./misc    {};
 
   tex = call ./tex {};
-
-  logic   = call ./logic   {};
-  haskell = call ./haskell {};
-  ocaml   = call ./ocaml   {};
-  python3 = call ./python  {};
-  scala   = call ./scala   {};
+  logic = call ./logic   {};
+  pl = call ./pl {};
 in let
   all = [
     custom
     clifun
-    misc
-
-    tex
-
     logic
-    haskell
-    ocaml
-    python3
-    scala
+    misc
+    pl
+    tex
   ];
 in let
   # nix-shell -A shell
