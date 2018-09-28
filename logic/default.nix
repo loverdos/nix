@@ -1,7 +1,7 @@
-{ pkgs /*: NixPkgs*/, envName }:
+{ pkgs /*: NixPkgs*/, devenv }:
 
 pkgs.buildEnv {
-  name = "${envName}-logic";
+  name = "${devenv.name}-logic";
   paths = with pkgs; [
     coq
     coq2html

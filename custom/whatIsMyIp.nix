@@ -1,4 +1,4 @@
-{ pkgs /*: NixPkgs */}:
+{ pkgs /*: NixPkgs */, devenv }:
 
 let
   name = "whatIsMyIp";

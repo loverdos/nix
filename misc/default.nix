@@ -1,7 +1,7 @@
-{ pkgs /*: NixPkgs*/, envName }:
+{ pkgs /*: NixPkgs*/, devenv }:
 
 pkgs.buildEnv {
-  name = "${envName}-misc";
+  name = "${devenv.name}-misc";
   paths = with pkgs; [
     # diff
     colordiff
@@ -38,6 +38,7 @@ pkgs.buildEnv {
     httpie
     hping
     nmap
+    rsync
     wget
     zerotierone
 

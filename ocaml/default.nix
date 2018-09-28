@@ -1,14 +1,14 @@
-{ pkgs /*: NixPkgs*/, envName }:
+{ pkgs /*: NixPkgs*/, devenv }:
 
 pkgs.buildEnv {
-  name = "${envName}-ocaml";
+  name = "${devenv.name}-ocaml";
   paths = with pkgs; [
     ocaml
-
+    
     # basic dependencies
-    gnumake
-    m4
-    gcc
+    #gnumake
+    #m4
+    #gcc
 
     opam
   ];

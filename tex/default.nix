@@ -1,4 +1,4 @@
-{ pkgs /*: NixPkgs*/, envName }:
+{ pkgs /*: NixPkgs*/, devenv }:
 
 let
   tex = pkgs.texlive.combine {
@@ -13,7 +13,7 @@ let
   };
 in
   pkgs.buildEnv {
-    name = "${envName}-tex";
+    name = "${devenv.name}-tex";
     paths = [
       tex
     ];

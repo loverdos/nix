@@ -1,10 +1,10 @@
-{ pkgs /*: NixPkgs*/, envName }:
+{ pkgs /*: NixPkgs*/, devenv }:
 
 let
   python3 = pkgs.python36;
 in
   pkgs.buildEnv {
-    name = "${envName}-python3";
+    name = "${devenv.name}-python3";
     paths = with python3.pkgs; [
       pygments
 

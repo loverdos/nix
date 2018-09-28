@@ -1,19 +1,24 @@
 let
-  env = import ./env.nix;
-  pkgs = import ./pkgs.nix;
-  callPackage = pkgs.newScope env;
+  # setup
+  pkgs   = import ./pkgs.nix;
+  devenv = import ./devenv.nix;
+  util   = import ./util.nix { inherit pkgs devenv; };
+
+  name = "${devenv.name}-env";
+  call = util.call;
 in let
-  clifun = callPackage ./clifun  {};
-  custom = callPackage ./custom  {};
-  misc   = callPackage ./misc    {};
+  # packages
+  clifun = call ./clifun  {};
+  custom = call ./custom  {};
+  misc   = call ./misc    {};
 
-  tex = callPackage ./tex {};
+  tex = call ./tex {};
 
-  logic   = callPackage ./logic   {};
-  haskell = callPackage ./haskell {};
-  ocaml   = callPackage ./ocaml   {};
-  python3 = callPackage ./python  {};
-  scala   = callPackage ./scala   {};
+  logic   = call ./logic   {};
+  haskell = call ./haskell {};
+  ocaml   = call ./ocaml   {};
+  python3 = call ./python  {};
+  scala   = call ./scala   {};
 in let
   all = [
     custom
@@ -29,9 +34,6 @@ in let
     scala
   ];
 in let
-  name = "${env.envName}-env";
-  util = callPackage ./util.nix {};
-
   # nix-shell -A shell
   shell_ = pkgs.stdenv.mkDerivation {
     inherit name;

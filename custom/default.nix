@@ -1,12 +1,12 @@
-{ pkgs /*: NixPkgs*/, envName }:
+{ pkgs /*: NixPkgs*/, devenv, call }:
 
 let
-  emojify    = pkgs.callPackage ./emojify.nix {};  
-  whatIsMyIp = pkgs.callPackage ./whatIsMyIp.nix {};
-  wtf        = pkgs.callPackage ./wtf.nix {};
+  emojify    = call ./emojify.nix {};
+  whatIsMyIp = call ./whatIsMyIp.nix {};
+  wtf        = call ./wtf.nix {};
 in
   pkgs.buildEnv {
-    name = "${envName}-custom";
+    name = "${devenv.name}-custom";
     paths = [
       emojify
       whatIsMyIp

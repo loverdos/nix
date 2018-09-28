@@ -1,10 +1,10 @@
-{ pkgs /*: NixPkgs*/, envName }:
+{ pkgs /*: NixPkgs*/, devenv }:
 
 let
   haskell = pkgs.haskell;
 in
   pkgs.buildEnv {
-    name = "${envName}-haskell";
+    name = "${devenv.name}-haskell";
     paths = with pkgs; [
       # stack
       haskellPackages.pandoc-citeproc
