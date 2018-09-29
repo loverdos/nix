@@ -5,9 +5,10 @@ let
   whatIsMyIp = call ./whatIsMyIp.nix {};
   wtf        = call ./wtf.nix {};
 
-  gitMy         = call ./git-my.nix          {};
-  gitStandup    = call ./git-standup.nix     {};
-  gitWhenMerged = call ./git-when-merged.nix {};
+  gitBranchStatus = call ./git-branch-status.nix {};
+  gitMy           = call ./git-my.nix            {};
+  gitStandup      = call ./git-standup.nix       {};
+  gitWhenMerged   = call ./git-when-merged.nix   {};
 in
   pkgs.buildEnv {
     name = "${devenv.name}-custom";
@@ -16,6 +17,7 @@ in
       whatIsMyIp
       wtf
 
+      gitBranchStatus
       gitMy
       gitStandup
       gitWhenMerged

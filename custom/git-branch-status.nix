@@ -1,11 +1,11 @@
 { pkgs /*: NixPkgs */}:
 
 let
-  owner = "kamranahmedse";
-  repo = "git-standup";
+  owner = "alexdavid";
+  repo = "git-branch-status";
   binary = repo;
-  rev = "2012e681";
-  sha256 = "1q1gba4y46s0krqkjkprgi0a7dnbfw6vr9ni9dryf257qh6lq8rd";
+  rev = "14a09f6b";
+  sha256 = "0yf5401w90sy6hqvz0xpyg22wlrdrfjn29jqsxy52y32zb424q68";
 in
   pkgs.stdenv.mkDerivation {
     name = "${binary}-${rev}";
