@@ -5,9 +5,9 @@ let
   whatIsMyIp = call ./whatIsMyIp.nix {};
   wtf        = call ./wtf.nix {};
 
-  # git goodies
-  gitWhenMerged = call ./git-when-merged.nix {};
+  gitMy         = call ./git-my.nix          {};
   gitStandup    = call ./git-standup.nix     {};
+  gitWhenMerged = call ./git-when-merged.nix {};
 in
   pkgs.buildEnv {
     name = "${devenv.name}-custom";
@@ -16,7 +16,8 @@ in
       whatIsMyIp
       wtf
 
-      gitWhenMerged
+      gitMy
       gitStandup
+      gitWhenMerged
     ];
   }
