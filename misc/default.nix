@@ -24,6 +24,8 @@ pkgs.buildEnv {
     # git
     gitFull
     gitAndTools.diff-so-fancy
+    gitAndTools.git-open
+    gitAndTools.git-imerge
     gitAndTools.tig
 
     # monitoring
