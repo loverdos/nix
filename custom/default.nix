@@ -7,6 +7,7 @@ let
 
   # git goodies
   gitWhenMerged = call ./git-when-merged.nix {};
+  gitStandup    = call ./git-standup.nix     {};
 in
   pkgs.buildEnv {
     name = "${devenv.name}-custom";
@@ -16,5 +17,6 @@ in
       wtf
 
       gitWhenMerged
+      gitStandup
     ];
   }
