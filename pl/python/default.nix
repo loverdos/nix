@@ -14,5 +14,8 @@ in
 
       protobuf
       thrift
+
+      # issue tracking
+      bugwarrior
     ];
   }

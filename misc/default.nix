@@ -10,6 +10,7 @@ pkgs.buildEnv {
 
     # platform
     docker_compose
+    docker-machine
     packer
     terraform
 
@@ -66,6 +67,10 @@ pkgs.buildEnv {
 
     # calendar
     gcalcli
+
+    # issue tracking
+    taskwarrior
+    tasknc
 
     # media
     youtube-dl
