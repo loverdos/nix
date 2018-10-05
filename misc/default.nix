@@ -21,6 +21,7 @@ pkgs.buildEnv {
     # shell
     fish
     mosh
+    tmux
     
     # git
     gitFull
@@ -32,9 +33,10 @@ pkgs.buildEnv {
     # monitoring
     htop
 
-    # documentation
+    # docs
     mkdocs
-    pandoc
+    pandoc # see also some haskell packages
+    pdftk
 
     # network
     curl
@@ -71,6 +73,7 @@ pkgs.buildEnv {
     # issue tracking
     taskwarrior
     tasknc
+    tasksh
 
     # media
     youtube-dl
