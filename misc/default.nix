@@ -16,6 +16,7 @@ pkgs.buildEnv {
 
     # build
     ant
+    cmake
     stack
 
     # shell
@@ -37,6 +38,9 @@ pkgs.buildEnv {
     mkdocs
     pandoc # see also some haskell packages
     pdftk
+
+    # PIM
+    perkeep
 
     # network
     curl
