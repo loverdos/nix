@@ -48,6 +48,7 @@ pkgs.buildEnv {
     hping
     nmap
     openssh
+    openssl_1_1
     rsync
     wget
     zerotierone
