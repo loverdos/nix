@@ -11,6 +11,7 @@ pkgs.buildEnv {
     # platform
     docker_compose
     docker-machine
+    glibcLocales
     packer
     terraform
 
@@ -22,7 +23,11 @@ pkgs.buildEnv {
     # shell
     fish
     mosh
+    shellcheck
     tmux
+
+    # desktop
+    rofi
     
     # git
     gitFull
@@ -58,6 +63,7 @@ pkgs.buildEnv {
     nix-info
     nix-prefetch-git
     nixops
+    patchelf
 
     # CLI
     ag
