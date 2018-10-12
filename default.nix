@@ -12,9 +12,9 @@ in let
   custom = call ./custom  {};
   misc   = call ./misc    {};
 
-  tex = call ./tex {};
+  tex   = call ./tex {};
   logic = call ./logic   {};
-  pl = call ./pl {};
+  pl    = call ./pl {};
 in let
   all = [
     custom
