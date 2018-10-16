@@ -35,6 +35,7 @@ pkgs.buildEnv {
     gitAndTools.git-open
     gitAndTools.git-imerge
     gitAndTools.tig
+    trufflehog
 
     # monitoring
     htop
