@@ -44,6 +44,7 @@ pkgs.buildEnv {
     mkdocs
     pandoc # see also some haskell packages
     pdftk
+    pdfpc
 
     # PIM
     perkeep
@@ -64,6 +65,7 @@ pkgs.buildEnv {
     nix-info
     nix-prefetch-git
     nixops
+    nox
     patchelf
 
     # CLI
