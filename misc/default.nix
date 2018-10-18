@@ -3,32 +3,35 @@
 pkgs.buildEnv {
   name = "${devenv.name}-misc";
   paths = with pkgs; [
-    # diff
-    colordiff
-    diffutils
-    wdiff
-
-    # platform
-    docker_compose
-    docker-machine
-    glibcLocales
-    packer
-    terraform
-
     # build
     ant
     cmake
     stack
 
-    # shell
-    fish
-    mosh
-    shellcheck
-    tmux
+    # CLI
+    ag
+    jq
+    parallel
+    pv
 
     # desktop
     rofi
-    
+
+    # diff
+    colordiff
+    diffutils
+    wdiff
+
+    # docs
+    mkdocs
+    pandoc # see also some haskell packages
+    pdftk
+    pdfpc
+
+    # drawing
+    umlet
+    plantuml
+
     # git
     gitFull
     gitAndTools.diff-so-fancy
@@ -37,17 +40,20 @@ pkgs.buildEnv {
     gitAndTools.tig
     trufflehog
 
+    # IDL
+    protobuf
+    thrift
+
+    # issue tracking
+    taskwarrior
+    tasknc
+    tasksh
+
+    # media
+    youtube-dl
+
     # monitoring
     htop
-
-    # docs
-    mkdocs
-    pandoc # see also some haskell packages
-    pdftk
-    pdfpc
-
-    # PIM
-    perkeep
 
     # network
     curl
@@ -68,36 +74,29 @@ pkgs.buildEnv {
     nox
     patchelf
 
-    # CLI
-    ag
-    jq
-    parallel
-    pv
-
-    # IDL
-    protobuf
-    thrift
-
-    umlet
-    plantuml
-
-    # calendar
-    gcalcli
-
-    # issue tracking
-    taskwarrior
-    tasknc
-    tasksh
-
-    # media
-    youtube-dl
-
     # parsing/semantics/formal
     antlr
     ragel
     z3
 
+    # PIM
+    gcalcli
+    perkeep
+
+    # platform
+    docker_compose
+    docker-machine
+    glibcLocales
+    packer
+    terraform
+
     # security
     pwgen
+
+    # shell
+    fish
+    mosh
+    shellcheck
+    tmux
   ];
 }
