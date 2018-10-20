@@ -16,6 +16,7 @@ pkgs.buildEnv {
 
     # desktop
     rofi
+    rofi-systemd
 
     # diff
     colordiff
@@ -83,13 +84,6 @@ pkgs.buildEnv {
     gcalcli
     perkeep
 
-    # platform
-    docker_compose
-    docker-machine
-    glibcLocales
-    packer
-    terraform
-
     # security
     pwgen
 
@@ -98,5 +92,13 @@ pkgs.buildEnv {
     mosh
     shellcheck
     tmux
+
+    # system
+    docker_compose
+    docker-machine
+    glibcLocales
+    i7z
+    packer
+    terraform
   ];
 }
