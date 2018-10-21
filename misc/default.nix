@@ -85,6 +85,7 @@ pkgs.buildEnv {
     perkeep
 
     # security
+    pass
     pwgen
 
     # shell
