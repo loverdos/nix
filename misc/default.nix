@@ -92,6 +92,7 @@ pkgs.buildEnv {
     mosh
     shellcheck
     tmux
+    zsh
 
     # system
     docker_compose
