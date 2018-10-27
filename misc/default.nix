@@ -10,6 +10,7 @@ pkgs.buildEnv {
 
     # CLI
     ag
+    exa
     jq
     parallel
     pv
