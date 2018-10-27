@@ -1,29 +1,30 @@
 { pkgs /*: NixPkgs*/, devenv }:
 
-let
-  py3pkgs = pkgs.python36Packages;
+let 
+  pkgF = p: with p; [
+    pip
+    pygments
+    setuptools
+    tkinter
+    
+    # console
+    bpython
+    ipython
+    ptpython
+
+    #schema
+    protobuf
+    thrift
+
+    # issue tracking
+    bugwarrior    
+  ];
+
+  python36 = pkgs.python36.withPackages pkgF;
 in
   pkgs.buildEnv {
-    name = "${devenv.name}-python3";
+    name = "${devenv.name}-python";
     paths = [
-      pkgs.python3
-    ] ++ (with py3pkgs; 
-    [
-      pygments
-
-      setuptools
-      tkinter
-
-      # console
-      bpython
-      ipython
-      ptpython
-
-      # schema
-      protobuf
-      thrift
-
-      # issue tracking
-      bugwarrior
-    ]);
+      python36
+    ];
   }
