@@ -9,6 +9,7 @@ pkgs.buildEnv {
     (call ./ocaml   {})
     (call ./python  {})
     (call ./racket  {})
+    (call ./rust    {})
     (call ./scala   {})
   ];
 }

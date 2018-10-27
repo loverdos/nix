@@ -6,25 +6,16 @@ let
 
   name = "${devenv.name}-env";
   call = util.call;
-in let
-  # packages
-  clifun = call ./clifun  {};
-  custom = call ./custom  {};
-  misc   = call ./misc    {};
 
-  tex   = call ./tex {};
-  logic = call ./logic   {};
-  pl    = call ./pl {};
-in let
   all = [
-    custom
-    clifun
-    logic
-    misc
-    pl
-    tex
+    (call ./clifun {})
+    (call ./custom {})
+    (call ./logic  {})
+    (call ./misc   {})
+    (call ./pl     {})
+    (call ./tex    {})
   ];
-in let
+
   # nix-shell -A shell
   shell_ = pkgs.stdenv.mkDerivation {
     inherit name;
