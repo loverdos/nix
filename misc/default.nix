@@ -33,6 +33,10 @@ pkgs.buildEnv {
     umlet
     plantuml
 
+    # emulation
+    wine
+    winetricks
+
     # git
     gitFull
     gitAndTools.diff-so-fancy
