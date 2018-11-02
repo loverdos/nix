@@ -15,6 +15,10 @@ pkgs.buildEnv {
     parallel
     pv
 
+    # cloud
+    awscli
+    ec2_api_tools
+
     # desktop
     rofi
     rofi-systemd
