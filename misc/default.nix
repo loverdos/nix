@@ -33,6 +33,7 @@ pkgs.buildEnv {
     pandoc # see also some haskell packages
     pdftk
     pdfpc
+    xsane
 
     # drawing
     umlet
@@ -81,6 +82,7 @@ pkgs.buildEnv {
     nix-info
     nix-prefetch-git
     nixops
+    nixos-container
     nox
     patchelf
 
@@ -109,6 +111,7 @@ pkgs.buildEnv {
     docker-machine
     glibcLocales
     i7z
+    nsjail
     packer
     terraform
   ];
