@@ -8,8 +8,8 @@ pkgs.buildEnv {
     (call ./js      {})
     (call ./ocaml   {})
     (call ./python  {})
-    (call ./racket  {})
     (call ./rust    {})
     (call ./scala   {})
+    (call ./scheme  {})
   ];
 }

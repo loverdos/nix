@@ -1,8 +1,9 @@
 { pkgs /*: NixPkgs*/, devenv }:
 
 pkgs.buildEnv {
-  name = "${devenv.name}-racket";
+  name = "${devenv.name}-scheme";
   paths = [
-    pkgs.racket
+    # pkgs.racket
+    pkgs.chez
   ];
 }
