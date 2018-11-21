@@ -50,6 +50,7 @@ pkgs.buildEnv {
     gitAndTools.git-open
     gitAndTools.git-imerge
     gitAndTools.tig
+    gti
     trufflehog
 
     # IDL
