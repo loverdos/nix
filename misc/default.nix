@@ -40,6 +40,7 @@ pkgs.buildEnv {
     plantuml
 
     # emulation
+    dosbox
     wine
     winetricks
 
@@ -73,6 +74,7 @@ pkgs.buildEnv {
     nmap
     openssh
     openssl_1_1
+    rclone
     rsync
     wget
     zerotierone
