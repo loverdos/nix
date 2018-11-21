@@ -11,5 +11,6 @@ pkgs.buildEnv {
     (call ./rust    {})
     (call ./scala   {})
     (call ./scheme  {})
+    (call ./zig     {})
   ];
 }
