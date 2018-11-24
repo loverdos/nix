@@ -66,9 +66,6 @@ pkgs.buildEnv {
     # media
     youtube-dl
 
-    # monitoring
-    htop
-
     # network
     curl
     httpie
@@ -114,9 +111,13 @@ pkgs.buildEnv {
     docker_compose
     docker-machine
     glibcLocales
-    i7z
     nsjail
     packer
     terraform
+
+    # system info
+    i7z
+    neofetch
+    htop
   ];
 }
