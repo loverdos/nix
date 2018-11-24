@@ -46,11 +46,12 @@ pkgs.buildEnv {
     winetricks
 
     # git
-    gitFull
     gitAndTools.diff-so-fancy
     gitAndTools.git-open
     gitAndTools.git-imerge
     gitAndTools.tig
+    gitFull
+    git-lfs
     gti
     trufflehog
 
