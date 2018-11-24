@@ -1,25 +1,16 @@
 { pkgs /*: NixPkgs*/, devenv, call }:
 
-let
-  emojify    = call ./emojify.nix {};
-  whatIsMyIp = call ./whatIsMyIp.nix {};
-  wtf        = call ./wtf.nix {};
+pkgs.buildEnv {
+  name = "${devenv.name}-custom";
 
-  gitBranchStatus = call ./git-branch-status.nix {};
-  gitMy           = call ./git-my.nix            {};
-  gitStandup      = call ./git-standup.nix       {};
-  gitWhenMerged   = call ./git-when-merged.nix   {};
-in
-  pkgs.buildEnv {
-    name = "${devenv.name}-custom";
-    paths = [
-      emojify
-      whatIsMyIp
-      wtf
+  paths = [
+    (call ./emojify.nix {})
+    (call ./whatIsMyIp.nix {})
+    (call ./wtf.nix {})
 
-      gitBranchStatus
-      gitMy
-      gitStandup
-      gitWhenMerged
-    ];
-  }
+    (call ./git-branch-status.nix {})
+    (call ./git-my.nix {})
+    (call ./git-standup.nix {})
+    (call ./git-when-merged.nix {})
+  ];
+}
