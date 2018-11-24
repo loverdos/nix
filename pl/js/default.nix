@@ -5,6 +5,8 @@ pkgs.buildEnv {
   paths = with pkgs; [
     nodejs-10_x
 
+    nodePackages.node2nix
+
     yarn
     yarn2nix
   ];
