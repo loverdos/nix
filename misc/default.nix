@@ -11,6 +11,7 @@ pkgs.buildEnv {
     # CLI
     ag
     exa
+    help2man
     jq
     parallel
     pv
