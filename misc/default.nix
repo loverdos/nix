@@ -109,6 +109,7 @@ pkgs.buildEnv {
     zsh
 
     # system
+    coreutils
     docker_compose
     docker-machine
     glibcLocales
