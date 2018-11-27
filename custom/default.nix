@@ -12,5 +12,7 @@ pkgs.buildEnv {
     (call ./git-my.nix {})
     (call ./git-standup.nix {})
     (call ./git-when-merged.nix {})
+
+    (call ./unbuffered.nix {})
   ];
 }
