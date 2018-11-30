@@ -71,6 +71,7 @@ pkgs.buildEnv {
     curl
     httpie
     hping
+    jnettop
     nmap
     openssh
     openssl_1_1
