@@ -71,6 +71,7 @@ pkgs.buildEnv {
 
     # network
     curl
+    geoipWithDatabase
     httpie
     hping
     jnettop
