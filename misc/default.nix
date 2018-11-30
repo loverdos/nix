@@ -75,6 +75,7 @@ pkgs.buildEnv {
     httpie
     hping
     jnettop
+    netsniff-ng
     nmap
     openssh
     openssl_1_1
