@@ -30,6 +30,7 @@ pkgs.buildEnv {
     wdiff
 
     # docs
+    diffpdf
     mkdocs
     pandoc # see also some haskell packages
     pdftk
