@@ -56,6 +56,7 @@ pkgs.buildEnv {
     trufflehog
 
     # IDL
+    flatbuffers
     protobuf
     thrift
 
