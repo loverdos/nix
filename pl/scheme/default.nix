@@ -5,5 +5,6 @@ pkgs.buildEnv {
   paths = [
     # pkgs.racket
     pkgs.chez
+    pkgs.gambit
   ];
 }
