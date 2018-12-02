@@ -9,7 +9,12 @@ let
     collection-latexextra
     collection-mathscience
     collection-publishers
-    latexmk;
+    latexmk
+    
+    # for scribble
+    mathabx
+    mathabx-type1
+    ;
   };
 in
   pkgs.buildEnv {
