@@ -2,9 +2,11 @@
 
 pkgs.buildEnv {
   name = "${devenv.name}-scheme";
-  paths = [
-    # pkgs.racket
-    pkgs.chez
-    pkgs.gambit
+  paths = with pkgs; [
+    # racket
+    chez
+    chicken
+    gambit
+    gerbil-unstable
   ];
 }
