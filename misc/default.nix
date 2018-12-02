@@ -41,6 +41,10 @@ pkgs.buildEnv {
     umlet
     plantuml
 
+    # editing
+    emacs
+    vim
+
     # emulation
     dosbox
     wine
