@@ -6,6 +6,7 @@ pkgs.buildEnv {
     # build
     ant
     cmake
+    maven
     stack
 
     # CLI
