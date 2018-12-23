@@ -13,6 +13,7 @@ pkgs.buildEnv {
     (call ./git-standup.nix {})
     (call ./git-when-merged.nix {})
 
+    (call ./runjar.nix {})
     (call ./unbuffered.nix {})
   ];
 }
