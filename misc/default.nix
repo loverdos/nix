@@ -53,6 +53,7 @@ pkgs.buildEnv {
 
     # git
     gitAndTools.diff-so-fancy
+    gitAndTools.git-annex
     gitAndTools.git-open
     gitAndTools.git-imerge
     gitAndTools.tig
@@ -117,6 +118,9 @@ pkgs.buildEnv {
     shellcheck
     tmux
     zsh
+
+    # sound
+    espeak # espeak-ng
 
     # system
     coreutils
