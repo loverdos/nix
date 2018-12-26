@@ -4,7 +4,9 @@ let
 
   owner = "NixOS";
   repo = "nixpkgs-channels";
-  rev = "1d497bbff1932942c1243650267d998ca7cbc6dd";
+  rev = "928ff62213bb3ced88e2d151760d39a5153a680b"; # @18.09 
+  # nix-prefetch-git https://github.com/nixos/nixpkgs-channels REVISION
+  sha256 = "1xb63rwbnsxdli3yh0fnifa7p86bddh2g7g8hnsinbv3sh40qzml";
 
   revisedPkgs = builtins.fetchGit {
     inherit rev;
@@ -12,10 +14,12 @@ let
   };
 
   revisedPkgsFaster = defaultPkgs.fetchFromGitHub {
-    inherit owner repo rev;
-    sha256 = "1bnx09z884q21035zyi7s0l3jk3prcdyj254fiham4yry879s4k7";
+    inherit owner repo rev sha256;
   };
+
+  revisedPkgsOnceMore = fetchTarball https://github.com/NixOS/nixpkgs/archive/18.09.tar.gz;
 in
-  defaultPkgs
+  # defaultPkgs
   # import (revisedPkgs) {}
-  # import (revisedPkgsFaster) {}
+  import (revisedPkgsFaster) {}
+  # import (revisedPkgsOnceMore) {}
