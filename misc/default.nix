@@ -84,7 +84,7 @@ pkgs.buildEnv {
     netsniff-ng
     nmap
     openssh
-    openssl_1_1
+    openssl
     rclone
     rsync
     wget
