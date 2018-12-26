@@ -10,6 +10,7 @@ let
   all = [
     (call ./clifun {})
     (call ./custom {})
+    (call ./custom-ext {})
     (call ./logic  {})
     (call ./misc   {})
     (call ./pl     {})
