@@ -36,6 +36,7 @@ pkgs.buildEnv {
     pandoc # see also some haskell packages
     pdftk
     pdfpc
+    texinfo
     xsane
 
     # drawing
