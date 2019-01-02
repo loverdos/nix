@@ -76,6 +76,10 @@ pkgs.buildEnv {
     # media
     youtube-dl
 
+    # monitoring
+    fswatch
+    watchman
+
     # network
     curl
     geoipWithDatabase
