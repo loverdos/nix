@@ -134,6 +134,7 @@ pkgs.buildEnv {
     glibcLocales
     nsjail
     packer
+    sysstat
     terraform
 
     # system info
