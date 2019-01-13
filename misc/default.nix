@@ -85,6 +85,7 @@ pkgs.buildEnv {
     geoipWithDatabase
     httpie
     hping
+    iptraf-ng
     jnettop
     netsniff-ng
     nmap
