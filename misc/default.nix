@@ -76,6 +76,9 @@ pkgs.buildEnv {
     # media
     youtube-dl
 
+    # mercurial
+    mercurial
+
     # monitoring
     fswatch
     watchman
