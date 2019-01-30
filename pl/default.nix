@@ -6,6 +6,7 @@ pkgs.buildEnv {
     (call ./haskell {})
     (call ./idris   {})
     (call ./js      {})
+    (call ./lua     {})
     (call ./ocaml   {})
     (call ./python  {})
     (call ./rust    {})
