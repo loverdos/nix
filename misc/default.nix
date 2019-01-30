@@ -3,6 +3,9 @@
 pkgs.buildEnv {
   name = "${devenv.name}-misc";
   paths = with pkgs; [
+    # browser
+    vimb
+
     # build
     ant
     cmake
