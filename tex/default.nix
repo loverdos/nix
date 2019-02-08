@@ -21,5 +21,7 @@ in
     name = "${devenv.name}-tex";
     paths = [
       tex
+      pkgs.texmaker
+      pkgs.texstudio
     ];
   }
