@@ -48,7 +48,7 @@ pkgs.buildEnv {
 
     # editing
     emacs
-    vim
+    vimHugeX
 
     # emulation
     dosbox
