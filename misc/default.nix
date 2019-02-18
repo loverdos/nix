@@ -10,6 +10,7 @@ pkgs.buildEnv {
     ant
     cmake
     maven
+    meson
     stack
 
     # CLI
