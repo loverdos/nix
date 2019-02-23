@@ -24,6 +24,7 @@ pkgs.buildEnv {
     # cloud
     awscli
     ec2_api_tools
+    aws_shell
 
     # desktop
     rofi
