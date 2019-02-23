@@ -140,6 +140,7 @@ pkgs.buildEnv {
     docker_compose
     docker-machine
     glibcLocales
+    gparted
     nsjail
     packer
     sysstat
