@@ -112,6 +112,10 @@ pkgs.buildEnv {
     nox
     patchelf
 
+    # notifications
+    notify-desktop
+
+
     # parsing/semantics/formal
     antlr
     ragel
