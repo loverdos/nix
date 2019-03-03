@@ -7,6 +7,7 @@ pkgs.buildEnv {
     (call ./idris   {})
     (call ./java    {})
     (call ./js      {})
+    (call ./lisp    {})
     (call ./lua     {})
     (call ./ocaml   {})
     (call ./python  {})
