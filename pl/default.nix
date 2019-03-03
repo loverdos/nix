@@ -5,6 +5,7 @@ pkgs.buildEnv {
   paths = [
     (call ./haskell {})
     (call ./idris   {})
+    (call ./java    {})
     (call ./js      {})
     (call ./lua     {})
     (call ./ocaml   {})
