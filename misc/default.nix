@@ -8,6 +8,7 @@ pkgs.buildEnv {
 
     # build
     ant
+    bazel
     cmake
     maven
     meson
@@ -153,7 +154,8 @@ pkgs.buildEnv {
 
     # system info
     i7z
-    neofetch
     htop
+    ncdu
+    neofetch
   ];
 }
