@@ -4,9 +4,9 @@ let
 
   owner = "NixOS";
   repo = "nixpkgs-channels";
-  rev = "928ff62213bb3ced88e2d151760d39a5153a680b"; # @18.09 
+  rev = "07e2b59812de95deeedde95fb6ba22d581d12fbc"; # @19.03 
   # nix-prefetch-git https://github.com/nixos/nixpkgs-channels REVISION
-  sha256 = "1xb63rwbnsxdli3yh0fnifa7p86bddh2g7g8hnsinbv3sh40qzml";
+  sha256 = "1yxmv04v2dywk0a5lxvi9a2rrfq29nw8qsm33nc856impgxadpgf";
 
   revisedPkgs = builtins.fetchGit {
     inherit rev;
@@ -17,7 +17,7 @@ let
     inherit owner repo rev sha256;
   };
 
-  revisedPkgsOnceMore = fetchTarball https://github.com/NixOS/nixpkgs/archive/18.09.tar.gz;
+  revisedPkgsOnceMore = fetchTarball https://github.com/NixOS/nixpkgs/archive/19.03.tar.gz;
 in
   # defaultPkgs
   # import (revisedPkgs) {}
