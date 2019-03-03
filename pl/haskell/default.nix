@@ -7,6 +7,7 @@ in
     name = "${devenv.name}-haskell";
     paths = with pkgs; [
       # stack
+      ghc
       haskellPackages.pandoc-citeproc
     ];
   }
