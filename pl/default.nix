@@ -3,6 +3,7 @@
 pkgs.buildEnv {
   name = "${devenv.name}-pl";
   paths = [
+    (call ./go      {})
     (call ./haskell {})
     (call ./idris   {})
     (call ./java    {})
