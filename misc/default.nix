@@ -132,6 +132,7 @@ pkgs.buildEnv {
     pwgen
 
     # shell
+    #execline
     fish
     mosh
     shellcheck
@@ -149,6 +150,7 @@ pkgs.buildEnv {
     gparted
     nsjail
     packer
+    proot
     sysstat
     terraform
 
