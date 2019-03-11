@@ -8,5 +8,6 @@ pkgs.buildEnv {
     chicken
     gambit
     gerbil-unstable
+    guile
   ];
 }
