@@ -60,6 +60,7 @@ pkgs.buildEnv {
 
     # git
     gitAndTools.diff-so-fancy
+    gitAndTools.git-absorb
     gitAndTools.git-annex
     gitAndTools.git-open
     gitAndTools.git-imerge
