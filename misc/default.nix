@@ -46,8 +46,9 @@ pkgs.buildEnv {
     xsane
 
     # drawing
-    umlet
+    ditaa
     plantuml
+    umlet
 
     # editing
     emacs
