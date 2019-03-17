@@ -4,6 +4,7 @@ pkgs.buildEnv {
   name = "${devenv.name}-custom-ext";
 
   paths = [
+    (call ./dazel.nix {})
     (call ./emojify.nix {})
     (call ./whatIsMyIp.nix {})
     (call ./wtf.nix {})
