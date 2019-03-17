@@ -13,6 +13,9 @@ let
       inherit util;
       inherit call;
       inherit setPriority;
+
+      python3 = pkgs.python36;
+      python3Packages = pkgs.python36Packages;
     };
   };
 in

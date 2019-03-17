@@ -1,4 +1,4 @@
-{ pkgs /*: NixPkgs*/, devenv }:
+{ pkgs /*: NixPkgs*/, devenv, python3 }:
 
 let 
   pkgF = p: with p; [
@@ -17,14 +17,15 @@ let
     thrift
 
     # issue tracking
-    bugwarrior    
-  ];
+    bugwarrior
 
-  python36 = pkgs.python36.withPackages pkgF;
+    virtualenv
+    virtualenvwrapper
+  ];
 in
   pkgs.buildEnv {
     name = "${devenv.name}-python";
     paths = [
-      python36
+      (python3.withPackages pkgF)
     ];
   }
