@@ -55,8 +55,6 @@ pkgs.buildEnv {
 
     # emulation
     dosbox
-    wine
-    winetricks
 
     # git
     gitAndTools.diff-so-fancy
