@@ -3,6 +3,10 @@
 pkgs.buildEnv {
   name = "${devenv.name}-misc";
   paths = with pkgs; [
+    # archiving
+    atool
+    p7zip
+
     # browser
     vimb
 
