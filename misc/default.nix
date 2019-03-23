@@ -131,6 +131,9 @@ pkgs.buildEnv {
     gcalcli
     perkeep
 
+    # power
+    powertop
+
     # security
     pass
     pwgen
