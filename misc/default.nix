@@ -25,6 +25,7 @@ pkgs.buildEnv {
     jq
     parallel
     pv
+    rlwrap
 
     # cloud
     awscli
