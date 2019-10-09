@@ -3,13 +3,14 @@
 let
   tex = pkgs.texlive.combine {
     inherit (pkgs.texlive)
-    scheme-small
+    scheme-medium
     algorithms
     collection-langgreek
     collection-latexextra
     collection-mathscience
     collection-publishers
     latexmk
+    pstricks
     
     # for scribble
     mathabx
@@ -22,6 +23,7 @@ in
     paths = [
       tex
 
+      pkgs.hevea
       pkgs.lyx
       pkgs.texmaker
       pkgs.texstudio
