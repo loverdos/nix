@@ -12,7 +12,6 @@ pkgs.buildEnv {
 
     # build
     ant
-    bazel
     cmake
     maven
     meson
@@ -21,20 +20,19 @@ pkgs.buildEnv {
     # CLI
     ag
     exa
+    fzy
     help2man
+    jid
     jq
     parallel
     pv
+    ripgrep
     rlwrap
 
     # cloud
     awscli
     ec2_api_tools
     aws_shell
-
-    # desktop
-    rofi
-    rofi-systemd
 
     # diff
     colordiff
@@ -48,6 +46,7 @@ pkgs.buildEnv {
     pdftk
     pdfpc
     texinfo
+    unpaper
     xsane
 
     # drawing
@@ -56,7 +55,6 @@ pkgs.buildEnv {
     umlet
 
     # editing
-    emacs
     vimHugeX
 
     # emulation
@@ -97,7 +95,7 @@ pkgs.buildEnv {
     # network
     curl
     geoipWithDatabase
-    httpie
+    httpie # `http` is the executable
     hping
     iptraf-ng
     jnettop
@@ -140,7 +138,6 @@ pkgs.buildEnv {
     pwgen
 
     # shell
-    #execline
     fish
     mosh
     shellcheck
@@ -151,16 +148,15 @@ pkgs.buildEnv {
     espeak # espeak-ng
 
     # system
+    ansible2
     coreutils
     docker_compose
     docker-machine
     glibcLocales
     gparted
     nsjail
-    packer
     proot
     sysstat
-    terraform
 
     # system info
     i7z
