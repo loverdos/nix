@@ -1,8 +1,11 @@
 { pkgs /*: NixPkgs*/, devenv }:
 
-pkgs.buildEnv {
-  name = "${devenv.name}-zig";
-  paths = [
-    pkgs.zig
-  ];
-}
+let 
+  env = pkgs.buildEnv {
+    name = "${devenv.name}-zig";
+    paths = [
+      pkgs.zig
+    ];
+  };
+in
+  env
