@@ -31,8 +31,6 @@ pkgs.buildEnv {
 
     # cloud
     awscli
-    ec2_api_tools
-    aws_shell
 
     # diff
     colordiff
@@ -41,10 +39,10 @@ pkgs.buildEnv {
 
     # docs
     diffpdf
-    mkdocs
     pandoc # see also some haskell packages
     pdftk
     pdfpc
+    qpdf
     texinfo
     unpaper
     xsane
@@ -56,6 +54,7 @@ pkgs.buildEnv {
 
     # editing
     vimHugeX
+    # emacs
 
     # emulation
     dosbox
@@ -69,8 +68,8 @@ pkgs.buildEnv {
     gitAndTools.tig
     gitFull
     git-lfs
+    gitstats
     gti
-    trufflehog
 
     # IDL
     flatbuffers
@@ -99,6 +98,7 @@ pkgs.buildEnv {
     hping
     iptraf-ng
     jnettop
+    magic-wormhole
     netsniff-ng
     nmap
     openssh
@@ -106,12 +106,13 @@ pkgs.buildEnv {
     rclone
     rsync
     wget
-    zerotierone
+    # zerotierone
 
     # nix
     nix-diff
     nix-info
     nix-prefetch-git
+    # nixfmt
     nixops
     nixos-container
     nox
@@ -148,7 +149,7 @@ pkgs.buildEnv {
     espeak # espeak-ng
 
     # system
-    ansible2
+    ansible
     coreutils
     docker_compose
     docker-machine
