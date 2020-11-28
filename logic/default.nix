@@ -6,8 +6,8 @@ pkgs.buildEnv {
     coq
     coq2html
 
-    tlaplus
-    tlaplusToolbox
-    tlaps
+    # tlaplus
+    # tlaplusToolbox
+    # tlaps
   ];
 }

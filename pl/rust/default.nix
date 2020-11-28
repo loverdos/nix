@@ -3,6 +3,6 @@
 pkgs.buildEnv {
   name = "${devenv.name}-rust";
   paths = [
-    pkgs.rustup
+    # pkgs.rustup
   ];
 }

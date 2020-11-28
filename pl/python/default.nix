@@ -21,11 +21,15 @@ let
 
     virtualenv
     virtualenvwrapper
+
+    # data
+    visidata
   ];
 in
-  pkgs.buildEnv {
-    name = "${devenv.name}-python";
-    paths = [
-      (python3.withPackages pkgF)
-    ];
-  }
+  # pkgs.buildEnv {
+  #   name = "${devenv.name}-python";
+  #   paths = [
+  #     (python3.withPackages pkgF)
+  #   ];
+  # }
+  true

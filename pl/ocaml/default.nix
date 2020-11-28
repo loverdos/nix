@@ -3,13 +3,13 @@
 pkgs.buildEnv {
   name = "${devenv.name}-ocaml";
   paths = with pkgs; [
-    ocaml
+    # ocaml
     
     # basic dependencies
     #gnumake
     #m4
     #gcc
 
-    opam
+    # opam
   ];
 }

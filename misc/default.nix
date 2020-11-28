@@ -8,11 +8,13 @@ pkgs.buildEnv {
     p7zip
 
     # browser
+    # next
     vimb
 
     # build
     ant
-    cmake
+    cachix
+    # cmake
     maven
     meson
     stack
@@ -32,6 +34,9 @@ pkgs.buildEnv {
     # cloud
     awscli
 
+    # dict
+    wordnet
+
     # diff
     colordiff
     diffutils
@@ -39,6 +44,7 @@ pkgs.buildEnv {
 
     # docs
     diffpdf
+    # noweb
     pandoc # see also some haskell packages
     pdftk
     pdfpc
@@ -59,19 +65,9 @@ pkgs.buildEnv {
     # emulation
     dosbox
 
-    # git
-    gitAndTools.diff-so-fancy
-    gitAndTools.git-absorb
-    gitAndTools.git-annex
-    gitAndTools.git-open
-    gitAndTools.git-imerge
-    gitAndTools.tig
-    gitFull
-    git-lfs
-    gitstats
-    gti
-
     # IDL
+    cbor-diag
+    cddl # cbor
     flatbuffers
     protobuf
     thrift
@@ -83,9 +79,6 @@ pkgs.buildEnv {
 
     # media
     youtube-dl
-
-    # mercurial
-    mercurial
 
     # monitoring
     fswatch
@@ -112,15 +105,29 @@ pkgs.buildEnv {
     nix-diff
     nix-info
     nix-prefetch-git
+    
+    # By installing nixFlakes, I was getting a priority error,
+    #######################################################
+    #   error: packages
+    #   '/nix/store/60ksrk5pzzxvvy5dd5dqak27hqabn6f3-nix-2.3.6-man/share/man/man5/nix.conf.5.gz'
+    #   and
+    #   '/nix/store/7i8bgcvdpvd70pwmj9a81awrw14si5w8-christos-misc/share/man/man5/nix.conf.5.gz'
+    #   have the same priority 5;
+    #   use 'nix-env --set-flag priority NUMBER INSTALLED_PKGNAME'
+    #   to change the priority of one of the conflicting packages (0 being the highest priority)
+    #######################################################
+    # which I fixed locally by running:
+    # $ nix-env --set-flag priority 20 nix 
+    nixFlakes
+    
     # nixfmt
-    nixops
+    # nixops
     nixos-container
     nox
     patchelf
 
     # notifications
-    notify-desktop
-
+    # notify-desktop
 
     # parsing/semantics/formal
     antlr
@@ -142,7 +149,7 @@ pkgs.buildEnv {
     fish
     mosh
     shellcheck
-    tmux
+    # tmux
     zsh
 
     # sound
@@ -164,5 +171,24 @@ pkgs.buildEnv {
     htop
     ncdu
     neofetch
+
+    # terminal
+    asciinema
+    termtosvg
+
+    # VCS
+    fossil
+    mercurial
+    
+    gitAndTools.diff-so-fancy
+    gitAndTools.git-absorb
+    gitAndTools.git-annex
+    gitAndTools.git-open
+    gitAndTools.git-imerge
+    gitAndTools.tig
+    gitFull
+    git-lfs
+    gitstats
+    gti
   ];
 }

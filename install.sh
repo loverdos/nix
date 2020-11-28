@@ -4,6 +4,6 @@
 
 set -eux
 
-SCRIPT_FOLDER=$(dirname ${BASH_SOURCE[0]})
+SCRIPT_FOLDER=$(dirname "${BASH_SOURCE[0]}")
 
-nix-env --show-trace -if $SCRIPT_FOLDER/install.nix
+nix-env --show-trace -if "${SCRIPT_FOLDER}"/install.nix

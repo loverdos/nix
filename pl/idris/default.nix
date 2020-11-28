@@ -3,6 +3,6 @@
 pkgs.buildEnv {
   name = "${devenv.name}-idris";
   paths = [
-    pkgs.idris
+    # pkgs.idris
   ];
 }

@@ -4,7 +4,7 @@ let
   env = pkgs.buildEnv {
     name = "${devenv.name}-zig";
     paths = [
-      pkgs.zig
+      # pkgs.zig
     ];
   };
 in

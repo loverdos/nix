@@ -18,18 +18,18 @@ let
   ];
 
   # nix-shell -A shell
-  shell_ = pkgs.stdenv.mkDerivation {
+  shell = pkgs.stdenv.mkDerivation {
     inherit name;
     buildInputs = all;
   };
-  shell = util.setPriority 0 shell_;
+  # shell = util.setPriority 0 shell_;
 
   # nix-build -A build
-  build_ = pkgs.buildEnv {
+  build = pkgs.buildEnv {
     inherit name;
     paths = all;
   };
-  build = util.setPriority 0 build_;
+  # build = util.setPriority 0 build_;
 
   # nix-env -iA install -f default.nix
   install = build;

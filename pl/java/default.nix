@@ -3,6 +3,7 @@
 pkgs.buildEnv {
   name = "${devenv.name}-java";
   paths = with pkgs; [
-    zulu8
+    mx
+    # zulu8
   ];
 }

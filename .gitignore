@@ -1,1 +1,4 @@
 result
+.metals/
+.vscode/
+out/
