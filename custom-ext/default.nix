@@ -6,6 +6,7 @@ pkgs.buildEnv {
   paths = [
     (call ./dazel.nix {})
     (call ./emojify.nix {})
+    (call ./terraform.nix {})
     (call ./whatIsMyIp.nix {})
     (call ./wtf.nix {})
 
