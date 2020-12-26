@@ -1,16 +1,15 @@
 { pkgs /*: NixPkgs */ }:
 
 let
-  name = "terraform";
-  version = "0.12.25";
+  name = "consul";
+  version = "1.9.0";
   filename = "${name}_${version}_linux_amd64.zip";
   url = "https://releases.hashicorp.com/${name}/${version}/${filename}";
-  sha256 = "1c1zfd6xcn46grv3yh3sq2mz0gwpkdxzw3ylws3rycl536yslpg9";
+  sha256 = "1kj7s8lvm26ijwv3rdpsdzc60hg1awxgwrzpld5bm4zcki7rd6s0";
 in
   pkgs.stdenv.mkDerivation rec {
     inherit name;
 
-    # https://releases.hashicorp.com/terraform/0.12.25/terraform_0.12.25_linux_amd64.zip
     src = pkgs.fetchurl { inherit url sha256; };
 
     outputs = [ "out" ];
