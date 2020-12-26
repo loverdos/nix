@@ -22,6 +22,7 @@ pkgs.buildEnv {
     # CLI
     ag
     exa
+    fd
     fzy
     help2man
     jid
@@ -33,6 +34,7 @@ pkgs.buildEnv {
 
     # cloud
     awscli
+    awslogs
 
     # dict
     wordnet
@@ -41,6 +43,9 @@ pkgs.buildEnv {
     colordiff
     diffutils
     wdiff
+
+    # distributed systems
+    # ipfs
 
     # docs
     diffpdf
@@ -104,7 +109,7 @@ pkgs.buildEnv {
     # nix
     nix-diff
     nix-info
-    nix-prefetch-git
+    nix-prefetch-scripts
     
     # By installing nixFlakes, I was getting a priority error,
     #######################################################
@@ -123,6 +128,7 @@ pkgs.buildEnv {
     # nixfmt
     # nixops
     nixos-container
+    nix-tree
     nox
     patchelf
 
@@ -146,6 +152,7 @@ pkgs.buildEnv {
     pwgen
 
     # shell
+    direnv
     fish
     mosh
     shellcheck
